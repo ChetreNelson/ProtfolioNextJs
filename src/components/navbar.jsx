@@ -44,19 +44,22 @@ const NavBar = () => {
     },
     opened: {
       x: 0,
+      transition: {
+        when:"beforeChildren",
+        staggerChildren: 0.2,
+      },
     },
   };
-  const listItemVariants={
-    closed:{
-      x:-10,
-      opacity:0
+  const listItemVariants = {
+    closed: {
+      x: -10,
+      opacity: 0,
     },
-    opened:{
-      x:-10,
-      opacity:0
+    opened: {
+      x: 0,
+      opacity: 1,
     },
-
-  }
+  };
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       <div className="hidden md:flex gap-4 w-1/3">
