@@ -41,9 +41,13 @@ const AboutPage = () => {
               <Signature />
             </div>
             {/* biography scroll svg */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0.2, y: 0 }}
+              animate={{ opacity: 1, y: "10px" }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            >
               <Scroll />
-            </div>
+            </motion.div>
             {/* skillContainer */}
             <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
               <motion.h1
@@ -70,7 +74,17 @@ const AboutPage = () => {
                   </div>
                 ))}
               </motion.div>
-              <Scroll />
+              <motion.div
+                initial={{ opacity: 0.2, y: 0 }}
+                animate={{ opacity: 1, y: "10px" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
+              >
+                <Scroll />
+              </motion.div>
             </div>
             {/* experineceContaitner */}
             <div
