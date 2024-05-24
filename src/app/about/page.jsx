@@ -20,7 +20,7 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* containter */}
-      <div className="h-full overflow-scroll lg:flex " ref={containerRef}>
+      <div className="h-full overflow-y-scroll  lg:flex " ref={containerRef}>
         {/* textcontainer */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:w-2/3 lg:pr-0 xl:1/2">
           {/* biographhy-contatiner */}
