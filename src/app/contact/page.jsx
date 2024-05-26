@@ -7,40 +7,40 @@ const ContactPage = () => {
   const [sucess, setSuccess] = useState(false);
   const [err, setErr] = useState(false);
   const text = "Say Hello";
-  const formRef = useRef();
+  const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    setErr(false);
+    setSuccess(false);
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
-        NEXT_PUBLIC_TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         form.current,
-        {
-          publicKey: "YOUR_PUBLIC_KEY",
-        }
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         () => {
-          console.log("SUCCESS!");
+          setSuccess(true);
+          form.current.reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          setErr(true);
         }
       );
   };
   return (
     <motion.div
-      className="h-full"
+      className="h-full overflow-scroll"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+      <div className="h-[90%] mt-6 flex flex-col lg:flex-row  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
         {/* text-Containter  */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex justify-center items-center text-6xl">
-          <div>
+        <div className="h-[20%] lg:h-full lg:w-1/2 flex justify-center items-center text-6xl">
+          <div className="flex">
             {text.split("").map((letter, index) => (
               <motion.span
                 key={index}
@@ -55,15 +55,29 @@ const ContactPage = () => {
                 {letter}
               </motion.span>
             ))}
-            😊
+            <motion.div
+              initial={{ opacity: 0.2, y: 0 }}
+              animate={{ opacity: 1, y: "10px" }}
+              transition={{
+                repeat: Infinity,
+                duration: 3,
+                ease: "easeInOut",
+              }}
+            >
+              😊
+            </motion.div>
           </div>
         </div>
         {/* form-containter */}
-        <form ref={formRef} className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 ">
+        <form
+          onSubmit={sendEmail}
+          ref={form}
+          className="h-2/3 overflow-auto lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 "
+        >
           <span>Dear Nelson,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 h-auto border-b-black outline-none resize-none"
             name="user_message"
           />
           <span>My mail address is:</span>

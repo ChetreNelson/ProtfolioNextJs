@@ -81,20 +81,17 @@ const NavBar = () => {
           </span>
         </Link>
       </div>
-      <div className="hidden md:flex gap-4 w-1/3">
+      <div className="hidden md:flex gap-4 w-1/3 justify-end">
         <Link href="https://github.com/ChetreNelson">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
+        <Link href="https://www.facebook.com/nelson.kc.1048/">
           <Image src="/facebook.png" alt="" width={24} height={24} />
         </Link>
         <Link href="/">
           <Image src="/instagram.png" alt="" width={24} height={24} />
         </Link>
-        <Link href="/">
-          <Image src="/pinterest.png" alt="" width={24} height={24} />
-        </Link>
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/nelson-katwal-027abc/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>

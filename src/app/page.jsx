@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Homepage = () => {
+  const text = "Nelson Katwal,";
   return (
     <motion.div
       className="h-full"
@@ -18,23 +20,39 @@ const Homepage = () => {
         {/* TEXT CONTAINER */}
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* titlle */}
-          <h1 className="text-4xl md:text-6xl font-bold">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </h1>
+          <div className="w-full">
+            <span className="text-xl md:text-2xl font-normal">
+              Frontend Developer
+            </span>
+            <h1 className="text-4xl md:text-6xl font-bold">Hello I'm</h1>
+            <h1 className="text-4xl md:text-6xl font-bold">
+              {text.split("").map((letter, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 0 }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    delay: index * 0.1,
+                  }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </h1>
+          </div>
           {/* description */}
-          <p className="md:text-xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Perferendis incidunt ad fugit, ipsum illo accusamus, autem dolor
-            quidem dignissimos recusandae quaerat, nesciunt temporibus modi
-            culpa delectus! Nostrum ipsa repudiandae sunt.
+          <p className="md:text-xl text-justify">
+           a React wizard crafting sleek, lightning-fast web experiences. Dive into my work and see what cutting-edge front-end development looks like. Ready to build something amazing together? Let's talk.
           </p>
-          <div className=" flex gap-4 w-full">
-            <button className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
+          <div className=" flex gap-4 ">
+            <Link href="/portfolio" className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
               View My Work
-            </button>
-            <button className="p-4 rounded-lg ring-1 ring-black">
+            </Link>
+            <Link href="/contact" className="p-4 rounded-lg ring-1 ring-black">
               Contact Me
-            </button>
+            </Link>
           </div>
         </div>
       </div>
