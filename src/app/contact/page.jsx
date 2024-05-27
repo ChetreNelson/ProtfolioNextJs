@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 
 const ContactPage = () => {
   const [sucess, setSuccess] = useState(false);
+  const [validationErr, setValidationErr] = useState("");
   const [err, setErr] = useState(false);
   const text = "Say Hello";
   const form = useRef();
@@ -13,6 +14,18 @@ const ContactPage = () => {
     e.preventDefault();
     setErr(false);
     setSuccess(false);
+    setValidationErr("");
+    const email = form.current.user_email.value;
+    const message = form.current.user_message.value;
+
+    if (!message) {
+      setValidationErr("Please enter a message.");
+      return;
+    }
+    if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+      setValidationErr("Please enter a valid email address.");
+      return;
+    }
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
@@ -55,17 +68,7 @@ const ContactPage = () => {
                 {letter}
               </motion.span>
             ))}
-            <motion.div
-              initial={{ opacity: 0.2, y: 0 }}
-              animate={{ opacity: 1, y: "10px" }}
-              transition={{
-                repeat: Infinity,
-                duration: 3,
-                ease: "easeInOut",
-              }}
-            >
-              😊
-            </motion.div>
+            <div className="animate-bounce">😊</div>
           </div>
         </div>
         {/* form-containter */}
@@ -90,6 +93,9 @@ const ContactPage = () => {
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
             Send
           </button>
+          {validationErr && (
+            <span className="text-red-600 font-semibold">{validationErr}</span>
+          )}
           {sucess && (
             <span className="text-green-600 font-semibold">
               Your message has been sent sucessfully!
