@@ -114,8 +114,9 @@ const AboutPage = () => {
                     </div>
                     {/* jobdiscription */}
                     <div className="p-3 text-sm italic">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Enim laborum suscipit .
+                      Engaged in a React internship, actively contributing to
+                      real-world projects. Elevating frontend skills with
+                      hands-on React.js experience. Ready to make an impact!
                     </div>
                     {/* jobdate */}
                     <div className="p-3 text-red-400 text-sm font-semibold">
@@ -152,19 +153,19 @@ const AboutPage = () => {
                   <div className="w-1/3 ">
                     {/* jobtitle */}
                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                      React Intern
+                      Computer Science Instructor
                     </div>
                     {/* jobdiscription */}
                     <div className="p-3 text-sm italic">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Enim laborum suscipit .
+                      Developed and delivered curriculum for grades 8 to 10,
+                      covering C programming and HTML/CSS.
                     </div>
                     {/* jobdate */}
                     <div className="p-3 text-red-400 text-sm font-semibold">
-                      2024-Present
+                      2022-2024
                     </div>
                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                      Yoddha Lab
+                      CSS School
                     </div>
                   </div>
                 </div>
@@ -174,19 +175,20 @@ const AboutPage = () => {
                   <div className="w-1/3 ">
                     {/* jobtitle */}
                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                      React Intern
+                      Autodidactic React Journey
                     </div>
                     {/* jobdiscription */}
                     <div className="p-3 text-sm italic">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Enim laborum suscipit .
+                      Explore my autodidactic journey in React, where I built
+                      dynamic web applications and deepened my understanding of
+                      modern web development.
                     </div>
                     {/* jobdate */}
                     <div className="p-3 text-red-400 text-sm font-semibold">
-                      2024-Present
+                      2022-Present
                     </div>
                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                      Yoddha Lab
+                      Self
                     </div>
                   </div>
                   {/* centers */}
