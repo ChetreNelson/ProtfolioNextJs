@@ -10,8 +10,8 @@ const AboutPage = () => {
   const { scrollYProgress } = useScroll({ container: containerRef });
   const skillRef = useRef();
   const isSkillRefInVIew = useInView(skillRef, { once: true });
-   const experienceRef = useRef();
-   const isExperinceRefInView = useInView(experienceRef, { once: true });
+  const experienceRef = useRef();
+  const isExperinceRefInView = useInView(experienceRef, { once: true });
   return (
     <motion.div
       className="h-full"
@@ -25,15 +25,19 @@ const AboutPage = () => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:w-2/3 lg:pr-0 xl:1/2">
           {/* biographhy-contatiner */}
           <div className="flex flex-col gap-12 justify-center">
-            <h1 className="font-bold text-2xl">Biography</h1>
+            <h1 className="font-bold text-2xl">My Journey</h1>
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae esse sequi veniam praesentium ratione? Consectetur
-              libero accusamus eaque sunt vel, magni consequatur numquam autem
-              ipsum minus alias, exercitationem maiores et.
+              My journey into tech started with a simple moment - browsing a
+              book website. I was blown away by its smooth operation. Curiosity
+              led me to explore how websites work, and I was hooked. Learning
+              about web development became my passion. Now, as I intern at
+              Yoddha Lab and recall my time teaching at CSS School, that initial
+              spark still drives me. I'm eager to keep learning and growing in
+              this exciting field.
             </p>
             <span className="italic">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.(quote)
+              "Frontend development: where we turn caffeine into code and pixels
+              into magic."
             </span>
 
             {/* biography sign svg */}
