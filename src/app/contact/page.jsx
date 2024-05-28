@@ -75,13 +75,14 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-2/3 overflow-auto lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 "
+          className="h-2/3 overflow-auto  lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 "
         >
-          <span>Dear Nelson,</span>
+          <span className="">Dear Nelson,</span>
           <textarea
             rows={6}
-            className="bg-transparent border-b-2 h-auto border-b-black outline-none resize-none"
+            className="bg-transparent overflow-auto  border-b-2 h-auto border-b-black outline-none resize-none"
             name="user_message"
+            style={{ minHeight: "10rem" }}
           />
           <span>My mail address is:</span>
           <input
