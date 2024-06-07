@@ -71,14 +71,15 @@ const NavBar = () => {
       </div>
       {/* logo */}
       <div className="md:hidden lg:flex  xl:w-1/3 xl:justify-center">
-        <Link
-          href="/"
-          className="text-sm bg-black rounded-md p-1 font-semibold flex items-center justify-end"
-        >
-          <span className="text-white mr-1">nelson</span>
-          <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center ">
-            .dev
-          </span>
+        <Link href="/">
+          <div class="name-button">
+            <div class="box">N</div>
+            <div class="box">E</div>
+            <div class="box">L</div>
+            <div class="box">S</div>
+            <div class="box">O</div>
+            <div class="box">N</div>
+          </div>
         </Link>
       </div>
       <div className="hidden md:flex gap-4 w-1/3 justify-end">

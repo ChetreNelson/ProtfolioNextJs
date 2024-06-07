@@ -16,6 +16,8 @@ const ContactPage = () => {
     setSuccess(false);
     setValidationErr("");
     const email = form.current.user_email.value;
+    console.log("🚀 ~ sendEmail ~ email:", email)
+    
     const message = form.current.user_message.value;
 
     if (!message) {
@@ -45,14 +47,14 @@ const ContactPage = () => {
   };
   return (
     <motion.div
-      className="h-full overflow-scroll"
+      className="h-full overflow-y-scroll"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[90%] mt-6 flex flex-col lg:flex-row  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+      <div className="h-[90%] mt-6 flex flex-col lg:flex-row lg:justify-between  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
         {/* text-Containter  */}
-        <div className="h-[20%] lg:h-full lg:w-1/2 flex justify-center items-center text-6xl">
+        <div className="h-[20%] lg:h-full  lg:w-1/2 flex justify-center items-center text-6xl">
           <div className="flex">
             {text.split("").map((letter, index) => (
               <motion.span
@@ -72,42 +74,43 @@ const ContactPage = () => {
           </div>
         </div>
         {/* form-containter */}
-        <form
-          onSubmit={sendEmail}
-          ref={form}
-          className="h-2/3 overflow-auto  lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24 "
-        >
-          <span className="">Dear Nelson,</span>
-          <textarea
-            rows={6}
-            className="bg-transparent overflow-auto  border-b-2 h-auto border-b-black outline-none resize-none"
-            name="user_message"
-            style={{ minHeight: "10rem" }}
-          />
-          <span>My mail address is:</span>
-          <input
-            name="user_email"
-            type="text"
-            className="bg-transparent border-b-2 border-b-black outline-none "
-          />
-          <span>Regards</span>
-          <button className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
-            Send
-          </button>
-          {validationErr && (
-            <span className="text-red-600 font-semibold">{validationErr}</span>
-          )}
-          {sucess && (
-            <span className="text-green-600 font-semibold">
-              Your message has been sent sucessfully!
-            </span>
-          )}
-          {err && (
-            <span className="text-red-600 font-semibold">
-              Something went wrong!
-            </span>
-          )}
-        </form>
+        <div className="mt-10 flex items-center justify-center ">
+          <div class="form-container">
+            <form class="form" onSubmit={sendEmail} ref={form}>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input name="user_email" id="email" type="email" />
+              </div>
+              <div class="form-group">
+                <label for="textarea">How Can I Help You?</label>
+                <textarea
+                  cols="50"
+                  rows="10"
+                  id="textarea"
+                  name="user_message"
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit-btn">
+                Submit
+              </button>
+              {validationErr && (
+                <span className="text-red-600 font-semibold">
+                  {validationErr}
+                </span>
+              )}
+              {sucess && (
+                <span className="text-green-600 font-semibold">
+                  Your message has been sent sucessfully!
+                </span>
+              )}
+              {err && (
+                <span className="text-red-600 font-semibold">
+                  Something went wrong!
+                </span>
+              )}
+            </form>
+          </div>
+        </div>
       </div>
     </motion.div>
   );
