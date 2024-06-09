@@ -16,8 +16,6 @@ const ContactPage = () => {
     setSuccess(false);
     setValidationErr("");
     const email = form.current.user_email.value;
-    console.log("🚀 ~ sendEmail ~ email:", email)
-    
     const message = form.current.user_message.value;
 
     if (!message) {
