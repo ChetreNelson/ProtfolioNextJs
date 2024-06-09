@@ -36,6 +36,7 @@ body {
   border-radius: 16px;
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
+  
 }
 
 @keyframes gradient {
@@ -229,3 +230,84 @@ body {
 .name-button:hover .box:before {
   transform: translateY(0);
 }
+
+/* social-media */
+.card {
+  background-color: #e4e4e4;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px #c4c4c4,
+              0px 0px 10px #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4px;
+}
+
+
+.button {
+  background-color: #e4e4e4;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 5px #c4c4c4,
+              inset -5px -5px 5px #ffffff;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 3px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  box-shadow: none;
+}
+
+.button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.card .Github {
+  color: black;
+}
+
+.card .Github:hover {
+  background-color: #3035cb;
+  color: #e4e4e4;
+}
+
+
+.button.Github:hover img {
+  filter: brightness(0.85) invert(1);
+}
+.card .LinkedIn {
+  color: rgb(62, 125, 189);
+}
+.card .LinkedIn:hover {
+  background-color: #333;
+  color: #e4e4e4;
+}
+
+
+.button.LinkedIn:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.card .Chat {
+  color: #062a7f;
+}
+
+.card .Chat:hover {
+  background-color: #118ab9;
+  color: #e4e4e4;
+}
+
+
+

@@ -83,7 +83,7 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="hidden md:flex gap-4 w-1/3 justify-end">
-        <Link href="https://github.com/ChetreNelson">
+        {/* <Link href="https://github.com/ChetreNelson">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link href="https://www.facebook.com/nelson.kc.1048/">
@@ -94,7 +94,25 @@ const NavBar = () => {
         </Link>
         <Link href="https://www.linkedin.com/in/nelson-katwal-027abc/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
-        </Link>
+        </Link> */}
+        <div class="card">
+          <button class="button Github">
+            <Image src="/github.png" alt="" width={24} height={24} />
+            GitHub
+          </button>
+
+          <button class="button LinkedIn">
+            <Image src="/linkedin.png" alt="" width={24} height={24} />
+            LinkedIn
+          </button>
+
+          <button class="button Chat">
+            <Link href="https://www.facebook.com/nelson.kc.1048/">
+              <Image src="/facebook.png" alt="" width={24} height={24} />
+            </Link>
+           Facebook
+          </button>
+        </div>
       </div>
       <div className="md:hidden">
         <button
