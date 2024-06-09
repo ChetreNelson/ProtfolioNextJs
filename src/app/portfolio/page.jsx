@@ -13,12 +13,12 @@ const PortfolioPage = () => {
 
   return (
     <motion.div
-      className="h-full"
+      className="h-full protfoilo-container"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-[600vh] relative" ref={ref}>
+      <div className=" h-[600vh] relative" ref={ref}>
         <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
           My Works
         </div>
@@ -30,14 +30,14 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                <div className="flex h-screen flex-col gap-8 text-white">
+                {/* <div className="flex h-screen flex-col gap-8 text-white">
                   <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
                     {item.title}
                   </h1>
                   <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
                     <Image src={item.img} alt="" fill />
                   </div>
-                  <p className="w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
                   <Link href={item.link} className="flex justify-end">
@@ -45,14 +45,35 @@ const PortfolioPage = () => {
                       See Demo
                     </button>
                   </Link>
+                </div> */}
+                <div class="pcontainer">
+                  <div data-text="" style={{ "--r": "-15" }} className="glass">
+                    <Image src={item.img} alt="" fill />
+                  </div>
+                  <div
+                    data-text=""
+                    style={{ "--r": "5" }}
+                    className="glass"
+                  >
+                    {item.desc}
+                  </div>
+                  <div
+                    data-text=""
+                    style={{ "--r": "25" }}
+                    className="glass"
+                  >
+                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                      See Demo
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-8xl">Do you have a project?</h1>
+      {/* <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+        <h1 className="text-8xl mt-10">Do you have a project?</h1>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
@@ -79,7 +100,7 @@ const PortfolioPage = () => {
             Hire Me
           </Link>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };
