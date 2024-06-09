@@ -50,21 +50,15 @@ const PortfolioPage = () => {
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
                     <Image src={item.img} alt="" fill />
                   </div>
-                  <div
-                    data-text=""
-                    style={{ "--r": "5" }}
-                    className="glass"
-                  >
+                  <div data-text="" style={{ "--r": "5" }} className="glass">
                     {item.desc}
                   </div>
-                  <div
-                    data-text=""
-                    style={{ "--r": "25" }}
-                    className="glass"
-                  >
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                      See Demo
-                    </button>
+                  <div data-text="" style={{ "--r": "25" }} className="glass">
+                    <Link href={item.link} className="flex justify-end">
+                      <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
+                        See Demo
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
