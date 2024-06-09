@@ -44,14 +44,16 @@ const Homepage = () => {
           </div>
           {/* description */}
           <p className="md:text-xl text-justify">
-           a React wizard crafting sleek, lightning-fast web experiences. Dive into my work and see what cutting-edge front-end development looks like. Ready to build something amazing together? Let's talk.
+            a React wizard crafting sleek, lightning-fast web experiences. Dive
+            into my work and see what cutting-edge front-end development looks
+            like. Ready to build something amazing together? Let's talk.
           </p>
-          <div className=" flex gap-4 ">
-            <Link href="/portfolio" className="p-4 rounded-lg ring-1 ring-black bg-black text-white">
-              View My Work
+          <div className="  gap-4 ">
+            <Link href="/portfolio" className="">
+              <button class="btn">View My Work</button>
             </Link>
-            <Link href="/contact" className="p-4 rounded-lg ring-1 ring-black">
-              Contact Me
+            <Link href="/contact" className="p-4 ">
+              <button class="btn">Contact Me</button>
             </Link>
           </div>
         </div>

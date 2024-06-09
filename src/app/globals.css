@@ -175,6 +175,7 @@ body {
 .name-button {
   display: flex;
   border-radius: 20px;
+
 }
 .box {
   width: 35px;
@@ -184,19 +185,27 @@ body {
   align-items: center;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
   transition: all 0.8s;
   cursor: pointer;
   position: relative;
-  background: rgb(106, 96, 134);
+  border: none;
+  outline: none;
+  padding: 0px 7px;
+  border-radius: 6px;
+  color: #fff;
+  background-color: black;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1);
   overflow: hidden;
+  
+  
 }
 
 .box:before {
   content: "K";
   position: absolute;
   top: 0;
-  background: #0f0f0f;
+  background: white;
+  color:black;
   width: 100%;
   height: 100%;
   display: flex;
@@ -231,83 +240,119 @@ body {
   transform: translateY(0);
 }
 
-/* social-media */
-.card {
-  background-color: #e4e4e4;
-  border-radius: 15px;
-  box-shadow: 10px 10px 20px #c4c4c4,
-              0px 0px 10px #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 4px;
+
+/* homepage-btns */
+.btn {
+  font-size: 1.2rem;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 5px #1f4c65;
+  
 }
 
+.btn:active {
+  scale: 0.92;
+}
 
-.button {
-  background-color: #e4e4e4;
-  border: none;
-  border-radius: 10px;
-  box-shadow: inset 5px 5px 5px #c4c4c4,
-              inset -5px -5px 5px #ffffff;
-  color: #333;
-  cursor: pointer;
+.btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+/* social-media */
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 30px;
+  font-family: "Poppins", sans-serif;
+  justify-content: end;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 13px;
-  font-weight: bold;
-  margin: 3px;
-  padding: 10px;
-  text-transform: uppercase;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.button:hover {
-  box-shadow: none;
+.wrapper .tooltip {
+  position: absolute;
+  bottom: 0; /* Adjust this value to position the tooltip below the element */
+  transform: translateY(100%); /* Position the tooltip below */
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.button img {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  top: -4px; /* Adjust this value to align the arrow with the tooltip */
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.card .Github {
-  color: black;
+.wrapper .icon:hover .tooltip {
+  bottom: -10px; /* Adjust this value to control the distance of the tooltip from the icon */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-.card .Github:hover {
-  background-color: #3035cb;
-  color: #e4e4e4;
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-
-.button.Github:hover img {
-  filter: brightness(0.85) invert(1);
-}
-.card .LinkedIn {
-  color: rgb(62, 125, 189);
-}
-.card .LinkedIn:hover {
-  background-color: #333;
-  color: #e4e4e4;
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
 }
 
-
-.button.LinkedIn:hover img {
-  filter: brightness(0) invert(1);
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
 }
 
-.card .Chat {
-  color: #062a7f;
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
 }
-
-.card .Chat:hover {
-  background-color: #118ab9;
-  color: #e4e4e4;
-}
-
-
-
