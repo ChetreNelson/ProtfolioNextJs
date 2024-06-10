@@ -19,8 +19,16 @@ const PortfolioPage = () => {
       transition={{ duration: 1 }}
     >
       <div className=" h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          My Works
+        <div className="light-button  w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
+          <button class="bt w-screen items-center justify-center">
+            <div class="light-holder">
+              <div class="dot"></div>
+              <div class="light"></div>
+            </div>
+            <div class="button-holder ">
+              <p>My Works</p>
+            </div>
+          </button>
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
@@ -48,7 +56,7 @@ const PortfolioPage = () => {
                 </div> */}
                 <div class="pcontainer">
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
-                    <Image src={item.img} alt="" fill />
+                    <Image src={item.img} alt="" fill className="rounded-md" />
                   </div>
                   <div data-text="" style={{ "--r": "5" }} className="glass">
                     {item.desc}
