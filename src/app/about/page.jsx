@@ -26,7 +26,7 @@ const AboutPage = () => {
           {/* biographhy-contatiner */}
           <div className="flex flex-col gap-12 justify-center">
             <h1 className="font-bold text-2xl">My Journey</h1>
-            <p className="text-lg">
+            <p className="text-base">
               My journey into tech started with a simple moment - browsing a
               book website. I was blown away by its smooth operation. Curiosity
               led me to explore how websites work, and I was hooked. Learning

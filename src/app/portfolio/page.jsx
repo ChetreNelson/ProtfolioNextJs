@@ -14,13 +14,13 @@ const PortfolioPage = () => {
   return (
     <motion.div
       className="h-full protfoilo-container"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      // initial={{ y: "-200vh" }}
+      // animate={{ y: "0%" }}
+      // transition={{ duration: 1 }}
     >
       <div className=" h-[600vh] relative" ref={ref}>
         <div className="light-button  w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          <button class="bt w-screen items-center justify-center">
+          {/* <button class="bt w-screen items-center justify-center">
             <div class="light-holder">
               <div class="dot"></div>
               <div class="light"></div>
@@ -28,7 +28,8 @@ const PortfolioPage = () => {
             <div class="button-holder ">
               <p>My Works</p>
             </div>
-          </button>
+          </button> */}
+          <p>My Works</p>
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
@@ -58,8 +59,12 @@ const PortfolioPage = () => {
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
                     <Image src={item.img} alt="" fill className="rounded-md" />
                   </div>
-                  <div data-text="" style={{ "--r": "5" }} className="glass">
-                    {item.desc}
+                  <div style={{ "--r": "5" }} className="cardContainer glass flex flex-col">
+                    <div className="card">
+                    <h1> {item.title}</h1>
+                    <p>{item.desc}</p>
+
+                    </div>
                   </div>
                   <div data-text="" style={{ "--r": "25" }} className="glass">
                     <Link href={item.link} className="flex justify-end">
