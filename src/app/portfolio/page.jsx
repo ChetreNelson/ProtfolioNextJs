@@ -20,16 +20,7 @@ const PortfolioPage = () => {
     >
       <div className=" h-[600vh] relative" ref={ref}>
         <div className="light-button  w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          {/* <button class="bt w-screen items-center justify-center">
-            <div class="light-holder">
-              <div class="dot"></div>
-              <div class="light"></div>
-            </div>
-            <div class="button-holder ">
-              <p>My Works</p>
-            </div>
-          </button> */}
-          <p>My Works</p>
+          <p className="btn-shine">My Works</p>
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
@@ -39,22 +30,6 @@ const PortfolioPage = () => {
                 className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
-                {/* <div className="flex h-screen flex-col gap-8 text-white">
-                  <h1 className="text-xl font-bold md:text-4xl lg:text-6xl xl:text-8xl">
-                    {item.title}
-                  </h1>
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-                    <Image src={item.img} alt="" fill />
-                  </div>
-                  <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-                    {item.desc}
-                  </p>
-                  <Link href={item.link} className="flex justify-end">
-                    <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                      See Demo
-                    </button>
-                  </Link>
-                </div> */}
                 <div class="pcontainer">
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
                     <Image src={item.img} alt="" fill className="rounded-md " />
