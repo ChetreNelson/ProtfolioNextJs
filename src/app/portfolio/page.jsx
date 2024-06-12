@@ -14,9 +14,9 @@ const PortfolioPage = () => {
   return (
     <motion.div
       className="h-full protfoilo-container"
-      // initial={{ y: "-200vh" }}
-      // animate={{ y: "0%" }}
-      // transition={{ duration: 1 }}
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
     >
       <div className=" h-[600vh] relative" ref={ref}>
         <div className="light-button  w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
@@ -57,7 +57,7 @@ const PortfolioPage = () => {
                 </div> */}
                 <div class="pcontainer">
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
-                    <Image src={item.img} alt="" fill className="rounded-md" />
+                    <Image src={item.img} alt="" fill className="rounded-md " />
                   </div>
                   <div style={{ "--r": "5" }} className="glass flex flex-col">
                     <div className="p-4 h-full bg- pt-8 rounded-lg shadow-lg max-w-lg mx-auto">
