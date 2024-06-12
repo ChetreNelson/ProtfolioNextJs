@@ -59,11 +59,34 @@ const PortfolioPage = () => {
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
                     <Image src={item.img} alt="" fill className="rounded-md" />
                   </div>
-                  <div style={{ "--r": "5" }} className="cardContainer glass flex flex-col">
-                    <div className="card">
-                    <h1> {item.title}</h1>
-                    <p>{item.desc}</p>
-
+                  <div style={{ "--r": "5" }} className="glass flex flex-col">
+                    <div className="p-2">
+                      <h1 className="text-center"> {item.title}</h1>
+                      <p>{item.desc}</p>
+                      <h2>Technologies Used</h2>
+                      <div className="p-4 flex justify-between">
+                        <Image
+                          className="hover:bg-red-200 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+                          src={item.technologies1}
+                          alt=""
+                          width={80}
+                          height={40}
+                        />
+                        <Image
+                          className="hover:bg-black rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+                          src={item.technologies2}
+                          alt=""
+                          width={80}
+                          height={40}
+                        />
+                        <Image
+                          className="hover:bg-red-200 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+                          src={item.technologies3}
+                          alt=""
+                          width={80}
+                          height={40}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div data-text="" style={{ "--r": "25" }} className="glass">

@@ -6,6 +6,9 @@ export const Projects = [
     desc: " Built with React and styled using Tailwind CSS, this application utilizes the Meals API to provide a wide range of food recipes for users to explore",
     img: "/newRecipeApp.png",
     link: "https://recipe-app-version1.vercel.app/",
+    technologies1:"/reactIcon.png",
+    technologies2:"/tailwind.png",
+    technologies3:"/apiIcon.png"
   },
   {
     id: 2,
