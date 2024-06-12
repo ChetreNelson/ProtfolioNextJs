@@ -60,32 +60,29 @@ const PortfolioPage = () => {
                     <Image src={item.img} alt="" fill className="rounded-md" />
                   </div>
                   <div style={{ "--r": "5" }} className="glass flex flex-col">
-                    <div className="p-2">
-                      <h1 className="text-center"> {item.title}</h1>
-                      <p>{item.desc}</p>
-                      <h2>Technologies Used</h2>
-                      <div className="p-4 flex justify-between">
-                        <Image
-                          className="hover:bg-red-200 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
-                          src={item.technologies1}
-                          alt=""
-                          width={80}
-                          height={40}
-                        />
-                        <Image
-                          className="hover:bg-black rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
-                          src={item.technologies2}
-                          alt=""
-                          width={80}
-                          height={40}
-                        />
-                        <Image
-                          className="hover:bg-red-200 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
-                          src={item.technologies3}
-                          alt=""
-                          width={80}
-                          height={40}
-                        />
+                    <div className="p-4 h-full bg- pt-8 rounded-lg shadow-lg max-w-lg mx-auto">
+                      <h1 className="text-center text-2xl font-semibold mb-2">
+                        {item.title}
+                      </h1>
+                      <p className="text-center text-gray-700 mb-4">
+                        {item.desc}
+                      </p>
+                      <h2 className="text-center text-xl font-medium mb-3">
+                        Technologies Used
+                      </h2>
+                      <div className="p-4 flex justify-around space-x-4">
+                        {
+                          item.technologies?.map((technogolies,index)=>(
+
+                            <Image
+                              className="hover:bg-white p-2 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+                              src={technogolies}
+                              alt=""
+                              width={80}
+                              height={40}
+                            />
+                          ))
+                        }
                       </div>
                     </div>
                   </div>
