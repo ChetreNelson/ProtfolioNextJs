@@ -16,9 +16,9 @@ const AboutPage = () => {
   return (
     <motion.div
       className="h-full"
-      // initial={{ y: "-200vh" }}
-      // animate={{ y: "0%" }}
-      // transition={{ duration: 1 }}
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
     >
       {/* containter */}
       <div className="h-full overflow-y-scroll  lg:flex " ref={containerRef}>
