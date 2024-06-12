@@ -4,8 +4,8 @@ const Signature = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 560 432"
-        width="185"
-        height="77"
+        width="285"
+        height="117"
       >
         <path
           d="M 183.400,329.800 C 188.960,330.898 187.800,332.200 192.200,334.600"

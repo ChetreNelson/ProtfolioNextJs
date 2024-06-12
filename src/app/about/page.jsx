@@ -5,6 +5,7 @@ import Scroll from "@/components/atoms/scroll";
 import { Skills } from "@/constants/skills";
 import Brain from "@/components/atoms/brain";
 import { useRef } from "react";
+import Image from "next/image";
 const AboutPage = () => {
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({ container: containerRef });
@@ -15,9 +16,9 @@ const AboutPage = () => {
   return (
     <motion.div
       className="h-full"
-      initial={{ y: "-200vh" }}
-      animate={{ y: "0%" }}
-      transition={{ duration: 1 }}
+      // initial={{ y: "-200vh" }}
+      // animate={{ y: "0%" }}
+      // transition={{ duration: 1 }}
     >
       {/* containter */}
       <div className="h-full overflow-y-scroll  lg:flex " ref={containerRef}>
@@ -25,17 +26,19 @@ const AboutPage = () => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64  lg:w-2/3 lg:pr-0 xl:1/2">
           {/* biographhy-contatiner */}
           <div className="flex flex-col gap-12 justify-center">
-            <h1 className="font-bold text-2xl">My Journey</h1>
-            <p className="text-base">
+            <h1 className="font-bold text-4xl text-purple-700 mb-4 underline">
+              My Journey
+            </h1>
+            <p className="text-lg text-gray-800 leading-relaxed">
               My journey into tech started with a simple moment - browsing a
               book website. I was blown away by its smooth operation. Curiosity
               led me to explore how websites work, and I was hooked. Learning
               about web development became my passion. Now, as I intern at
-              Yoddha Lab and recall my time teaching at CSS School, that initial
-              spark still drives me. I'm eager to keep learning and growing in
-              this exciting field.
+              <span className="text-blue-600 font-semibold"> Yoddha Lab</span>,
+              that initial spark still drives me. I'm eager to keep learning and
+              growing in this exciting field.
             </p>
-            <span className="italic">
+            <span className="italic text-lg text-gray-600 block mt-4 border-l-4 border-blue-500 pl-4 py-2">
               "Frontend development: where we turn caffeine into code and pixels
               into magic."
             </span>
@@ -71,10 +74,15 @@ const AboutPage = () => {
                 {Skills.map((item, index) => (
                   <div
                     key={index}
-                    className="rounded p-2 text-sm cursor-pointer bg-black
-                     text-white hover:bg-white hover:text-black"
+                    className="rounded p-2 cursor-pointer flex border border-gray-300 shadow-md hover:shadow-lg"
                   >
-                    {item}
+                    <Image
+                      className="rounded-md bg-white p-2 transition-transform transform hover:scale-105"
+                      src={item}
+                      width={80}
+                      height={40}
+                      alt="skills Icons"
+                    />
                   </div>
                 ))}
               </motion.div>
