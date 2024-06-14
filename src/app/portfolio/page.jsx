@@ -32,7 +32,14 @@ const PortfolioPage = () => {
               >
                 <div class="pcontainer">
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
-                    <Image src={item.img} alt="" fill className="rounded-md " />
+                    {/* <Image src={item.img} alt="" fill className="rounded-md " /> */}
+                    <iframe
+                      src="https://recipe-app-version1.vercel.app/"
+                      frameBorder="0"
+                      width="100%"
+                      height="300px"
+                      allowFullScreen
+                    ></iframe>
                   </div>
                   <div style={{ "--r": "5" }} className="glass flex flex-col">
                     <div className="p-4 h-full bg- pt-8 rounded-lg shadow-lg max-w-lg mx-auto">
@@ -46,18 +53,15 @@ const PortfolioPage = () => {
                         Technologies Used
                       </h2>
                       <div className="p-4 flex justify-around space-x-4">
-                        {
-                          item.technologies?.map((technogolies,index)=>(
-
-                            <Image
-                              className="hover:bg-white p-2 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
-                              src={technogolies}
-                              alt=""
-                              width={80}
-                              height={40}
-                            />
-                          ))
-                        }
+                        {item.technologies?.map((technogolies, index) => (
+                          <Image
+                            className="hover:bg-white p-2 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
+                            src={technogolies}
+                            alt=""
+                            width={80}
+                            height={40}
+                          />
+                        ))}
                       </div>
                     </div>
                   </div>

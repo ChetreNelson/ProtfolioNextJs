@@ -19,6 +19,7 @@ body {
   @apply rounded-3xl bg-gradient-to-b from-blue-100 to-red-100;
 }
 
+
 /* contact-form */
 .form-container {
   width: 400px;
