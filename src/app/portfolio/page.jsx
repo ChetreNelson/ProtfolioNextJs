@@ -34,10 +34,11 @@ const PortfolioPage = () => {
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
                     {/* <Image src={item.img} alt="" fill className="rounded-md " /> */}
                     <iframe
-                      src="https://recipe-app-version1.vercel.app/"
+                      src={item.link}
                       frameBorder="0"
                       width="100%"
                       height="300px"
+                      onLoad={(e) => e.target.contentWindow.focus()}
                       allowFullScreen
                     ></iframe>
                   </div>
