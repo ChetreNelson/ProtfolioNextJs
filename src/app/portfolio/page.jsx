@@ -35,7 +35,6 @@ const PortfolioPage = () => {
                     {/* <Image src={item.img} alt="" fill className="rounded-md " /> */}
                     <iframe
                       src={item.link}
-                      frameBorder="0"
                       width="100%"
                       height="300px"
                       onLoad={(e) => e.target.contentWindow.focus()}
