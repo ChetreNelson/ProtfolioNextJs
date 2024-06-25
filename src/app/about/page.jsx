@@ -33,14 +33,16 @@ const AboutPage = () => {
               My journey into tech started with a simple moment - browsing a
               book website. I was blown away by its smooth operation. Curiosity
               led me to explore how websites work, and I was hooked. Learning
-              about web development became my passion. Now, as I intern at
-              <span className="text-blue-600 font-semibold"> Yoddha Lab</span>,
-              that initial spark still drives me. I'm eager to keep learning and
-              growing in this exciting field.
+              about web development became my passion. Now, as an
+              <span className="text-blue-600 font-semibold">
+                Frontend Devloper
+              </span>
+              , that initial spark still drives me. I&apos;m eager to keep
+              learning and growing in this exciting field.
             </p>
             <span className="italic text-lg text-gray-600 block mt-4 border-l-4 border-blue-500 pl-4 py-2">
-              "Frontend development: where we turn caffeine into code and pixels
-              into magic."
+              &quot;Frontend development: where we turn caffeine into code and
+              pixels into magic.&quot;
             </span>
 
             {/* biography sign svg */}

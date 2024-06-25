@@ -59,6 +59,7 @@ const PortfolioPage = () => {
                             className="hover:bg-white p-2 rounded-lg shadow-md transition-transform duration-300 ease-in-out transform hover:scale-105"
                             src={technogolies}
                             alt=""
+                            key={index}
                             width={80}
                             height={40}
                           />

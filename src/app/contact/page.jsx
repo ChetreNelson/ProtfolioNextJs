@@ -40,6 +40,7 @@ const ContactPage = () => {
         },
         (error) => {
           setErr(true);
+          console.log(error)
         }
       );
   };

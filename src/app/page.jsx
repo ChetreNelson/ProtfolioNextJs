@@ -24,7 +24,7 @@ const Homepage = () => {
             <span className="text-xl md:text-2xl font-normal">
               Frontend Developer
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold">Hello I'm</h1>
+            <h1 className="text-4xl md:text-6xl font-bold">Hello I&apos;m</h1>
             <h1 className="text-4xl md:text-6xl font-bold">
               {text.split("").map((letter, index) => (
                 <motion.span
@@ -46,7 +46,7 @@ const Homepage = () => {
           <p className="md:text-xl text-justify">
             a React wizard crafting sleek, lightning-fast web experiences. Dive
             into my work and see what cutting-edge front-end development looks
-            like. Ready to build something amazing together? Let's talk.
+            like. Ready to build something amazing together? Let&apos;s talk.
           </p>
           <div className="  gap-4 ">
             <Link href="/portfolio" className="">
