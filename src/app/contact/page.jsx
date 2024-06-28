@@ -40,7 +40,7 @@ const ContactPage = () => {
         },
         (error) => {
           setErr(true);
-          console.log(error)
+          console.log(error);
         }
       );
   };
@@ -78,12 +78,17 @@ const ContactPage = () => {
             <form class="form" onSubmit={sendEmail} ref={form}>
               <div class="form-group ">
                 <label for="email">Email</label>
-                <input className="h-12" name="user_email" id="email" type="email" />
+                <input
+                  className="h-12"
+                  name="user_email"
+                  id="email"
+                  type="email"
+                />
               </div>
               <div class="form-group">
                 <label for="textarea">How Can I Help You?</label>
                 <textarea
-                className="h-24 xl:h-56  "
+                  className="h-24 xl:h-56  "
                   cols="50"
                   rows="10"
                   id="textarea"
@@ -112,7 +117,6 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-     
     </motion.div>
   );
 };
