@@ -73,16 +73,17 @@ const ContactPage = () => {
           </div>
         </div>
         {/* form-containter */}
-        <div className="mt-10 flex items-center justify-center ">
-          <div class="form-container">
+        <div className="mt-10 flex  items-center justify-center ">
+          <div class="form-container w-96 xl:w-[450px] 2xl:w-[500px] h-[500px]">
             <form class="form" onSubmit={sendEmail} ref={form}>
-              <div class="form-group">
+              <div class="form-group ">
                 <label for="email">Email</label>
-                <input name="user_email" id="email" type="email" />
+                <input className="h-12" name="user_email" id="email" type="email" />
               </div>
               <div class="form-group">
                 <label for="textarea">How Can I Help You?</label>
                 <textarea
+                className="h-24 xl:h-56  "
                   cols="50"
                   rows="10"
                   id="textarea"

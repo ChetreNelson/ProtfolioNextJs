@@ -34,7 +34,7 @@ const AboutPage = () => {
               book website. I was blown away by its smooth operation. Curiosity
               led me to explore how websites work, and I was hooked. Learning
               about web development became my passion. Now, as an
-              <span className="text-blue-600 font-semibold">
+              <span className="text-blue-600 pl-1 font-semibold">
                 Frontend Devloper
               </span>
               , that initial spark still drives me. I&apos;m eager to keep

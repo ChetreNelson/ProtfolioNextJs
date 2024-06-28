@@ -22,9 +22,9 @@ body {
 
 /* contact-form */
 .form-container {
-  width: 400px;
+  
   background: linear-gradient(#212121, #212121) padding-box,
-    linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    linear-gradient(145deg, transparent 35%, red, #40c9ff) border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
   font-size: 14px;
@@ -96,7 +96,6 @@ body {
   border-radius: 8px;
   resize: none;
   color: #fff;
-  height: 96px;
   border: 1px solid #414141;
   outline: none;
   background-color: transparent;
