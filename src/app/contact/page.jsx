@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ContactPage = () => {
   const [sucess, setSuccess] = useState(false);
@@ -44,6 +44,15 @@ const ContactPage = () => {
         }
       );
   };
+  useEffect(() => {
+    setTimeout(() => {
+      if (sucess) {
+        setSuccess(false);
+      } else {
+        setErr(false);
+      }
+    }, 3000);
+  }, [sucess, err]);
   return (
     <motion.div
       className="h-full overflow-y-scroll"
@@ -96,7 +105,7 @@ const ContactPage = () => {
                 ></textarea>
               </div>
               <button type="submit" class="form-submit-btn">
-                Submit
+                {sucess ?'Sent':'Submit'}
               </button>
               {validationErr && (
                 <span className="text-red-600 font-semibold">
