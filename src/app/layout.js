@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Nelson Katwal | Animation Portfolio",
   description:
-    "Explore the creative works of Nelson Katwal, a professional animator showcasing a portfolio of animations, designs, and artistic projects.",
+    "Explore the creative works of Nelson Katwal, a frontend developer showcasing a portfolio of animations, designs, and artistic projects.",
   keywords:
     "Nelson Katwal, animation, portfolio, animator, design, art, creative works, animation projects",
   author: "Nelson Katwal",
