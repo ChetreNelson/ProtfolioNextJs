@@ -14,11 +14,17 @@ const Homepage = () => {
     >
       <div className=" h-full flex flex-col lg:flex-row-reverse justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 ">
         {/* IMAGE CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 relative ">
-          <Image src="/heroOne.png" alt="" fill className="object-contain " />
+        <div className="h-1/2 lg:h-full lg:w-1/2 relative hidden sm:flex sm:justify-center lg:justify-end">
+          <Image
+            src="/heroOne.png"
+            alt=""
+            width={500}
+            height={500}
+            className="object-contain  "
+          />
         </div>
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
+        <div className="h-1/2 mt-4 lg:m-0 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center">
           {/* titlle */}
           <div className="w-full">
             <span className="text-xl md:text-2xl font-normal">
@@ -48,12 +54,12 @@ const Homepage = () => {
             into my work and see what cutting-edge front-end development looks
             like. Ready to build something amazing together? Let&apos;s talk.
           </p>
-          <div className="  gap-4 ">
+          <div className=" flex flex-col sm:flex-row items-center lg:gap-4 ">
             <Link href="/portfolio" className="">
-              <button class="btn">View My Work</button>
+              <button className="btn w-52">View My Work</button>
             </Link>
             <Link href="/contact" className="p-4 ">
-              <button class="btn">Contact Me</button>
+              <button className="btn w-52">Contact Me</button>
             </Link>
           </div>
         </div>
