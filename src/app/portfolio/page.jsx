@@ -1,4 +1,5 @@
 "use client";
+import Scroll from "@/components/atoms/scroll";
 import { Projects } from "@/constants/projects";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -19,28 +20,43 @@ const PortfolioPage = () => {
       transition={{ duration: 1 }}
     >
       <div className=" h-[600vh] relative" ref={ref}>
-        <div className="light-button  w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
+        <div className="light-button gap-2 w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
           <p>My Works</p>
+          <motion.div
+            initial={{ opacity: 0.2, y: 0 }}
+            animate={{ opacity: 1, y: "10px" }}
+            transition={{
+              repeat: Infinity,
+              duration: 3,
+              ease: "easeInOut",
+            }}
+          >
+            <Scroll />
+          </motion.div>
         </div>
+
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {Projects.map((item) => (
               <div
-                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item.color}`}
+                className={`h-screen w-screen flex items-center justify-center bg-gradient-to-r ${item?.color}`}
                 key={item.id}
               >
-                <div class="pcontainer">
+                <div className="pcontainer flex flex-col h-20 lg:flex-row">
                   <div data-text="" style={{ "--r": "-15" }} className="glass">
-                    {/* <Image src={item.img} alt="" fill className="rounded-md " /> */}
-                    <iframe
-                    className="object-contain w-full h-full "
-                    
+                    <Image
+                      src={item.img}
+                      alt=""
+                      fill
+                      className="rounded-lg p-2"
+                    />
+                    {/* <iframe
+                      className="object-contain w-full h-full "
                       src={item.link}
-                     
                       onLoad={(e) => e.target.contentWindow.focus()}
                       allowFullScreen
-                    ></iframe>
+                    ></iframe> */}
                   </div>
                   <div style={{ "--r": "5" }} className="glass flex flex-col">
                     <div className="p-4 h-full bg- pt-8 rounded-lg shadow-lg max-w-lg mx-auto">
