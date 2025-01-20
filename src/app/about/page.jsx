@@ -124,17 +124,18 @@ const AboutPage = () => {
                   <div className="w-1/3 ">
                     {/* jobtitle */}
                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                      React Intern
+                      Frontend Developer (React.Js)
                     </div>
                     {/* jobdiscription */}
                     <div className="p-3 text-sm italic">
-                      Engaged in a React internship, actively contributing to
-                      real-world projects. Elevating frontend skills with
-                      hands-on React.js experience. Ready to make an impact!
+                      As a React Frontend Developer, I build scalable,
+                      maintainable solutions, lead modernization initiatives
+                      with a focus on code quality, and create user-centric
+                      interfaces .
                     </div>
                     {/* jobdate */}
                     <div className="p-3 text-red-400 text-sm font-semibold">
-                      2024-Present
+                      Jul, 2024-Present
                     </div>
                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
                       Yoddha Lab
@@ -167,60 +168,61 @@ const AboutPage = () => {
                   <div className="w-1/3 ">
                     {/* jobtitle */}
                     <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                      Computer Science Instructor
+                      React Intern
                     </div>
                     {/* jobdiscription */}
                     <div className="p-3 text-sm italic">
-                      Developed and delivered curriculum for grades 8 to 10,
-                      covering C programming and HTML/CSS.
+                      Engaged in a React internship, actively contributing to
+                      real-world projects. Elevating frontend skills with
+                      hands-on React.js experience. Ready to make an impact!
                     </div>
                     {/* jobdate */}
                     <div className="p-3 text-red-400 text-sm font-semibold">
-                      2022-2024
+                      Apr, 2024-Jul, 2024
                     </div>
                     <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                      CSS School
+                    Yoddha Lab
                     </div>
                   </div>
                 </div>
                 {/* explistitem */}
-                <div className="flex justify-between h-48">
+                {/* <div className="flex justify-between h-48"> */}
                   {/* left */}
-                  <div className="w-1/3 ">
+                  {/* <div className="w-1/3 "> */}
                     {/* jobtitle */}
-                    <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
+                    {/* <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
                       Autodidactic React Journey
-                    </div>
+                    </div> */}
                     {/* jobdiscription */}
-                    <div className="p-3 text-sm italic">
+                    {/* <div className="p-3 text-sm italic">
                       Explore my autodidactic journey in React, where I built
                       dynamic web applications and deepened my understanding of
                       modern web development.
-                    </div>
+                    </div> */}
                     {/* jobdate */}
-                    <div className="p-3 text-red-400 text-sm font-semibold">
+                    {/* <div className="p-3 text-red-400 text-sm font-semibold">
                       2022-Present
-                    </div>
-                    <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
+                    </div> */}
+                    {/* <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
                       Self
-                    </div>
-                  </div>
+                    </div> */}
+                  {/* </div> */}
                   {/* centers */}
-                  <div className="w-1/6 ">
+                  {/* <div className="w-1/6 "> */}
                     {/* line */}
-                    <div className="w-1 h-full bg-gray-600 rounded relative">
+                    {/* <div className="w-1 h-full bg-gray-600 rounded relative"> */}
                       {/* circle */}
-                      <div className="absolute h-5 w-5  rounded-full ring-4 ring-red-400  bg-white -left-2"></div>
-                    </div>
-                  </div>
+                      {/* <div className="absolute h-5 w-5  rounded-full ring-4 ring-red-400  bg-white -left-2"></div>
+                    </div> */}
+                  {/* </div> */}
                   {/* right */}
-                  <div className="w-1/3 "></div>
-                </div>
+                  {/* <div className="w-1/3 "></div> */}
+                {/* </div> */}
               </motion.div>
             </div>
           </div>
         </div>
-        <div className="hidden lg:block w-1/3 sticky top-0 z-30 xl:w-1/2">
+        <div className="hidden lg:block w-1/3 sticky mt-8 top-0 z-30 xl:w-1/2">
           <Brain scrollYProgress={scrollYProgress} />
         </div>
       </div>
